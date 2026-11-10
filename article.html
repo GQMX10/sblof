@@ -6,7 +6,7 @@
 <title>文章</title>
 <link rel="stylesheet" href="/text/style.css">
 <!-- markdown 渲染库。也可下载到本地，避免依赖外网 -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@4/marked.min.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -51,7 +51,10 @@
 
 
   /* ---------- 加载并渲染 markdown ---------- */
-  fetch('posts/' + encodeURIComponent(slug) + '.md')
+ fetch('posts/' + encodeURIComponent(slug) + '.md', {
+      headers: { 'Accept': 'text/plain' },
+      cache: 'no-store'
+    })
     .then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.text();
