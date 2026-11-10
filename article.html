@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>文章</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 <script src="https://cdn.jsdelivr.net/npm/marked@4/marked.min.js"></script>
 </head>
 <body>
 <div class="wrap">
 
-  <a class="back-link" href="index.html">← 返回目录</a>
+  <a class="back-link" href="./index.html">← 返回目录</a>
 
   <div class="article-header">
     <h1 id="title">加载中…</h1>
@@ -41,7 +41,7 @@
     document.title = '文章不存在';
     titleEl.textContent = '文章不存在';
     bodyEl.innerHTML =
-      '<p class="article-status">没有找到这篇文章。<a href="index.html">返回目录</a></p>';
+      '<p class="article-status">没有找到这篇文章。<a href="./index.html">返回目录</a></p>';
     pagerEl.hidden = true;
     return;
   }
