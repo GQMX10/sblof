@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>文章存档</title>
-<link rel="stylesheet" href="/text/style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <div class="wrap">
@@ -137,7 +137,7 @@
     tocEl.innerHTML = pageItems.map(function (post) {
       return (
         '<li class="toc-item">' +
-'<a href="/text/article.html?p=' + encodeURIComponent(post.slug) + '">' +
+'<a href="./article.html?p=' + encodeURIComponent(post.slug) + '">' +
             '<div class="toc-main">' +
               '<h2 class="toc-title">' + esc(post.title) + '</h2>' +
               (post.desc
