@@ -66,16 +66,17 @@ fetch('posts/' + encodeURIComponent(slug) + '.md', {
     .then(function (md) {
       if (typeof marked === 'undefined') throw new Error('marked 未加载');
 
-     let html = marked.parse(md);   // 注意：const 改成 let
-
-      // 把 ::: 标题 … ::: 转成 <details>
-      html = html.replace(
-        /:::\s*(.+?)\n([\s\S]*?)\n:::/g,
+      // 在解析前把 ::: 标题 … ::: 转成 <details>
+      // （放在 parse 之前，就不受 breaks:true 把 \n 换成 <br> 的影响）
+      md = md.replace(
+        /^:::[ \t]*(.+?)[ \t]*\r?\n([\s\S]*?)\r?\n:::[ \t]*$/gm,
         function (_, title, inner) {
-          return '<details><summary>' + title.trim() + '</summary>\n\n' +
+          return '<details>\n<summary>' + title.trim() + '</summary>\n\n' +
                  inner.trim() + '\n\n</details>';
         }
       );
+
+      let html = marked.parse(md);
 
       // 按 <!-- pagebreak --> 切分（大小写、空格都兼容）
       pages = html.split(/<!--\s*pagebreak\s*-->/i)
