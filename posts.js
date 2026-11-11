@@ -11,10 +11,16 @@ window.POSTS = [
     desc: "（笑）",
     slug: "joke"
   },
+    {
+    title: "有点不对劲的初夜(实战篇)",
+    date: "2026-11-22",
+    desc: "R18",
+    slug: "chuye"
+  },
   {
-    title: "不可逆",
+    title: "不想要第二次接触",
     date: "2026-11-11",
     desc: "请注意预警",
-    slug: "bukeni"
+    slug: "2ci"
   }
 ];
