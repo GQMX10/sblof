@@ -66,12 +66,13 @@ fetch('posts/' + encodeURIComponent(slug) + '.md', {
     .then(function (md) {
       if (typeof marked === 'undefined') throw new Error('marked 未加载');
 
-      // 在解析前把 ::: 标题 … ::: 转成 <details>
-      // （放在 parse 之前，就不受 breaks:true 把 \n 换成 <br> 的影响）
+        // ::: 标题 … :::   默认折叠
+      // ::: open 标题 … :::  默认展开
       md = md.replace(
-        /^:::[ \t]*(.+?)[ \t]*\r?\n([\s\S]*?)\r?\n:::[ \t]*$/gm,
-        function (_, title, inner) {
-          return '<details>\n<summary>' + title.trim() + '</summary>\n\n' +
+        /^:::[ \t]*(open[ \t]+)?(.+?)[ \t]*\r?\n([\s\S]*?)\r?\n:::[ \t]*$/gm,
+        function (_, open, title, inner) {
+          return '<details' + (open ? ' open' : '') + '>\n<summary>' +
+                 title.trim() + '</summary>\n\n' +
                  inner.trim() + '\n\n</details>';
         }
       );
