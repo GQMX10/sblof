@@ -6,14 +6,14 @@
 
 window.POSTS = [
   {
-    title: "关于这个存档站",
+    title: "术士券笑话",
     date: "2025-03-02",
-    desc: "说明这个站点是做什么的，以及文章的组织方式。简介建议控制在 60 字以内。",
-    slug: "2025-03-02-hello"
+    desc: "（笑）",
+    slug: "joke"
   },
   {
     title: "不可逆",
-    date: "2025-01-18",
+    date: "2026-11-11",
     desc: "请注意预警",
     slug: "bukeni"
   }
