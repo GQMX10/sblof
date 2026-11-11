@@ -12,9 +12,9 @@ window.POSTS = [
     slug: "2025-03-02-hello"
   },
   {
-    title: "冬天的记录",
+    title: "不可逆",
     date: "2025-01-18",
-    desc: "一些关于冬天的随笔，随手记下的片段。",
-    slug: "2025-01-18-winter"
+    desc: "请注意预警",
+    slug: "bukeni"
   }
 ];
