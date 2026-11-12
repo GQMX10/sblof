@@ -22,7 +22,9 @@
 
   <!-- 新增：文章内分页条 -->
   <nav class="article-pager" id="article-pager" aria-label="文章内分页" hidden></nav>
-
+  <p class="back-to-top-wrap">
+    <a href="#" id="back-to-top" class="back-to-top">↑ 回到顶部</a>
+  </p>
 </div>
 
 <script src="posts.js"></script>
@@ -178,6 +180,10 @@ fetch('posts/' + encodeURIComponent(slug) + '.md', {
   }
 
   /* ---------- 交互 ---------- */
+    document.getElementById('back-to-top').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
   pagerEl.addEventListener('click', function (e) {
     const link = e.target.closest('a[data-page]');
     if (!link) return;
