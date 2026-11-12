@@ -452,7 +452,7 @@ a.pager-num:hover {
   font-size: 18px;
   line-height: 1.5;
   /* 改颜色 */
-color: #6b6660; /* 或者直接用 var(--text) 稍微加一点透明度 */
+color: var(--accent); opacity: 0.85; /* 或者直接用 var(--text) 稍微加一点透明度 */
   font-weight: 500; /* 稍微加粗，但不至于太抢眼 */
 }
 /* 如果想用主题色（砖红色），可以换成这样： */
