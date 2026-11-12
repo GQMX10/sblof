@@ -446,16 +446,32 @@ a.pager-num:hover {
   letter-spacing: 0.02em;
   color: var(--text-sub);    /* 注音用次要色，不抢正文 */
 }
+/* ---------- 12. 「共 N 篇」与说明同一行 ---------- */
+.header-meta-row {
+  display: flex;
+  flex-wrap: wrap;              /* 窄屏放不下时自动换行 */
+  align-items: baseline;        /* 字号不同也对齐基线，比 center 好看 */
+  gap: 4px 14px;
+  margin-top: 6px;
+}
 
-/* ---------- 12. 标题下方一行字 ---------- */
+/* 覆盖 header p { margin: 0 } 和 header p { margin-top: 6px } */
+.header-meta-row p {
+  margin: 0;
+}
+
 .header-note {
-  margin: 10px 0 0;
-  font-size: 13.5px;
+   margin-left: auto;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--text-sub);
 }
 
 .header-note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
