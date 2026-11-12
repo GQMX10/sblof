@@ -446,3 +446,17 @@ a.pager-num:hover {
   letter-spacing: 0.02em;
   color: var(--text-sub);    /* 注音用次要色，不抢正文 */
 }
+
+/* ---------- 12. 标题下方一行字 ---------- */
+.header-note {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+.header-note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
