@@ -58,7 +58,7 @@ a:focus-visible {
 
 /* ---------- 4. 页头 ---------- */
 header {
-  margin-bottom: 28px;
+  margin-bottom: 0; /* 原来是 28px，直接改成 0 */
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
@@ -451,8 +451,12 @@ a.pager-num:hover {
   margin: 8px 0 0;
   font-size: 18px;
   line-height: 1.5;
-  color: var(--text-sub);   /* 想要更黑就改成 var(--text) */
+  /* 改颜色 */
+  color: var(--accent); opacity: 0.85; */
+  font-weight: 500; /* 稍微加粗，但不至于太抢眼 */
 }
+/* 如果想用主题色（砖红色），可以换成这样： */
+/* color: var(--accent); opacity: 0.85; */
 
 .header-note a {
   color: var(--accent);
