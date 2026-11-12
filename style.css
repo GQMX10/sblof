@@ -406,3 +406,43 @@ a.pager-num:hover {
   font-size: 12.5px;
   color: var(--text-sub);
 }
+
+/* ---------- 10. 回到顶部 ---------- */
+.back-to-top-wrap {
+  margin: 32px 0 0;
+  text-align: center;
+}
+
+.back-to-top {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  color: var(--text-sub);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.back-to-top:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(184, 86, 63, .06);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- 11. 正文注音 ---------- */
+.article-body ruby {
+  ruby-align: center;        /* 注音在汉字上方居中 */
+  line-height: 2.1;          /* 撑开行盒，给上方注音留空间 */
+}
+
+.article-body rt {
+  font-size: 0.72em;         /* 默认约 0.5em，这里放大 */
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--text-sub);    /* 注音用次要色，不抢正文 */
+}
