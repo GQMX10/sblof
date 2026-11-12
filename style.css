@@ -461,7 +461,6 @@ a.pager-num:hover {
 }
 
 .header-note {
-   margin-left: auto;
   font-size: 13px;
   line-height: 1.6;
   color: var(--text-sub);
