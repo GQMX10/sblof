@@ -35,9 +35,11 @@ jobs:
           # 运行加密（注意：如果你的 password_template.html 没有放在 src 里，请把这行 --template 参数删掉）
           staticrypt ./src -r \
             --salt "a1b2c3d4e5f678901234567890abcdef" \
-            --remember 720 \
+            --remember 168 \
             --share-remember \
             --template ./src/password_template.html \
+            --template-title "请输入密码" \
+            --template-instructions "提示：WS接下来要参加试镜的剧目是？" \
             --directory ./dist
             
           # 检查是否成功生成了文件
