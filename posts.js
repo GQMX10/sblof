@@ -14,7 +14,7 @@ window.POSTS = [
     {
     title: "初夜本番篇",
     date: "2026-11-12",
-    desc: "SBLOFTER",
-    slug: "搞笑R18"
+    desc: "搞笑R18",
+    slug: "chuye"
   }
 ];
