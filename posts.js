@@ -12,9 +12,9 @@ window.POSTS = [
     slug: "joke"
   },
     {
-    title: "恳求",
+    title: "初夜本番篇",
     date: "2026-11-12",
     desc: "SBLOFTER",
-    slug: "kenyuan"
+    slug: "搞笑R18"
   }
 ];
